@@ -9,11 +9,14 @@ import { Nav,
         NavMenu,
         NavItem,
         NavLinks,
+        NavLinkR,
         NavBtn,
         NavBtnLink } from './NavBarElements';
+import { shopContext } from '../shopContext';
 
-export const Navbar = ({toggle}) => {
+export const Navbar = ({toggle},{home}) => {
     const [scrollNav, setScrollNav] = useState(false)
+    const isHome = home;
     const changeNav = () =>{
         if(window.scrollY >= 80){
             setScrollNav(true)
@@ -71,17 +74,17 @@ export const Navbar = ({toggle}) => {
                         </NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='cart'
-                        smooth={true}
-                        duration={500}
-                        spy={true}
+                        <NavLinkR 
+                         to='/Cart'
+                        //onClick={cartTo} smooth={true} duration={500} spy={true}
                         exact='true'
                         offset={-80}>
                             Cart
-                        </NavLinks>
+                        </NavLinkR>
                     </NavItem>
                     </NavMenu> 
                     <NavBtn>
+
                         <NavBtnLink to ="/signin">Sign In</NavBtnLink>
                     </NavBtn>
             </NavbarContainer> 

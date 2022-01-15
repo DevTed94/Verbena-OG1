@@ -13,6 +13,8 @@ export const homeObjOne = {
     dark: true,
     primary: true,
     darkText: false,
+    link: 'about',
+    linkR: false
 
 };
 
@@ -31,6 +33,8 @@ export const homeObjTwo = {
     dark: false,
     primary: false,
     darkText: true,
+    link: '/Products',
+    linkR: true
 
 };
 export const homeObjThree = {
@@ -48,5 +52,7 @@ export const homeObjThree = {
     dark: true,
     primary: true,
     darkText: false,
+    link: 'cart',
+    linkR: false
 
 };

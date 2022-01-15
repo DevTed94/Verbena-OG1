@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button} from '../ButtonElements'
+import {Button,Button2,ButtonR} from '../ButtonElements'
 import {
     AboutContainer,
     InfoWrapper,
@@ -15,7 +15,7 @@ import {
     TopLine
 } from './AboutElements';
 
-export const AboutSection = ({lightBg,lightText, darkText, topLine, id, img,headLine,buttonLabel,alt,imgStart,description, dark}) => {
+export const AboutSection = ({lightBg,lightText, darkText, topLine, id, img,headLine,buttonLabel,alt,imgStart,description, dark, link, linkR}) => {
     return (
         <>
         <AboutContainer lightBg={lightBg} id={id}>
@@ -26,14 +26,27 @@ export const AboutSection = ({lightBg,lightText, darkText, topLine, id, img,head
                             <TopLine>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headLine}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
+                            
                             <BtnWrap>
-                                <Button to="about" primary={!dark} dark={!dark} 
+                            {linkR ? 
+                                <ButtonR to={link}
+                                 primary={!dark} dark={!dark} 
                                 smooth={true}
                                 duration={500}
                                 spy={true}
                                 exact='true'
                                 offset={-80}
-                                >{buttonLabel}</Button>
+                                >{buttonLabel}</ButtonR>
+                            :
+                                <Button to={link}
+                                primary={!dark} dark={!dark} 
+                               smooth={true}
+                               duration={500}
+                               spy={true}
+                               exact='true'
+                               offset={-80}
+                               >{buttonLabel}</Button>
+                            }
                             </BtnWrap>
                         </TextWrapper>
                     </Column1>

@@ -68,7 +68,7 @@ const Footer = () => {
                             
                             OG
                         </SocialLogo>
-                        <WebsiteRights>OG copywrite {new Date().getFullYear()} All Rights Reserved</WebsiteRights>
+                        <WebsiteRights>OG © {new Date().getFullYear()} All Rights Reserved</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink href="/" target="_blank"
                             aria-label="Facebook"></SocialIconLink>

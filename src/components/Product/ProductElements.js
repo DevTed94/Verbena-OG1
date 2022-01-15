@@ -1,4 +1,39 @@
-import styled from 'styled-components'
+
+import styled from 'styled-components';
+
+export const ProductContainer = styled.div`
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFC8A2;
+
+    @media screen and (max-width: 768px){
+        height: 1100px;
+    }
+
+    @media screen and (max-width: 480px){
+        height: 1300px;
+    }
+
+`
+export const ProductWrap = styled.div`
+display: grid;
+`
+
+export const ProductCol = styled.div`
+
+`
+export const ProductIcon = styled.img`
+    height: 160px;
+    width: 160px;
+    margin-bottom: 10px;
+    
+    
+    /* height: 20rem;
+    background-size: cover;
+    background-position: center center; */
+`
 
 export const AboutContainer = styled.div`
     color: #fff;
@@ -28,7 +63,7 @@ export const InfoRow = styled.div`
     grid-template-areas: ${({imgStart})=> (imgStart? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width:768px){
-        grid-template-areas: ${({imgStart})=> (imgStart? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        grid-template-areas: ${({imgStart})=> (imgStart? `'col1' 'col2'` : ` 'col2 col2' 'col1 col1'`)};
     }
 `
 
